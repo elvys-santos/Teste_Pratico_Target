@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <string.h>
+
+
+int  main (void)
+{
+	setlocale(LC_ALL, "Portuguese");
+	char entrada[51], saida[51];
+	 
+	printf("====================\n");
+	printf(" Target Sistemas\n");
+	printf("====================\n\n");
+	
+	printf("Invertendo as Palavras\n\n");
+	
+	printf("Escreva uma palavra: ");
+	scanf("%[^\n]s",&entrada);
+	
+	int i,j,n;
+	
+	n = strlen(entrada);
+	
+	j = n-1;
+	for(i = 0; i < n; i ++){
+		
+		saida[i] = entrada[j];
+		j = j - 1;
+	}
+	
+	saida[i] = '\0';
+	
+	printf("\nVocê escreveu:%s\n",entrada);
+	printf("Sua palavra escrita de trás para frente: %s\n",saida);
+	
+	return(0);
+	
+	
+}

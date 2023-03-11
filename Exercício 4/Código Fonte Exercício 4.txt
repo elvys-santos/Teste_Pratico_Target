@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int  main (void)
+{
+	double faturamentoTotal, faturamentoSP, faturamentoRJ, faturamentoMG, faturamentoES,faturamentoOutros;
+	
+	faturamentoSP= 67836.43;
+	faturamentoRJ= 36678.66;
+	faturamentoMG= 29229.88;
+	faturamentoES= 27165.48;
+	faturamentoOutros=19849.53;
+	faturamentoTotal = faturamentoSP + faturamentoRJ + faturamentoMG + faturamentoES + faturamentoOutros;
+	
+	printf("====================\n");
+	printf(" Target Sistemas\n");
+	printf("====================\n\n");
+	
+	printf("O valor total do faturamento da empresa foi de R$ %0.2f\n\n",faturamentoTotal);
+	
+	printf("Sendo distribuido da seguinte maneira:\n");
+	
+	
+	double percSP = (faturamentoSP / faturamentoTotal)*100 ;
+	printf("O faturamento do estado de SP foi de %0.1f %%\n",percSP);
+	
+		double percRJ = (faturamentoRJ / faturamentoTotal)*100 ;
+	printf("O faturamento do estado de RJ foi de %0.1f %%\n",percRJ);
+	
+		double percMG = (faturamentoMG / faturamentoTotal)*100 ;
+	printf("O faturamento do estado de MG foi de %0.1f %%\n",percMG);
+	
+		double percES = (faturamentoSP / faturamentoTotal)*100 ;
+	printf("O faturamento do estado de ES foi de %0.1f %%\n",percES);
+	
+		double percOutros = (faturamentoOutros / faturamentoTotal)*100 ;
+	printf("O faturamento dos demais estados foi de %0.1f %%\n",percOutros);

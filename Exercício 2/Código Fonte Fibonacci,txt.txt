@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+
+
+int main(int argc, char *argv[]) {
+	
+	setlocale (LC_ALL, "Portuguese");
+
+
+	printf("====================\n");
+	printf(" Target Sistemas\n");
+	printf("====================\n\n");
+	
+	
+	int i, ant, ant2;
+	int resultado, num;
+	
+	printf("Digite um número: ");
+	scanf("%d", &num);
+	
+	ant = 1;
+	ant2 = 0;
+	
+	printf("%d ",ant2);
+	
+	
+	
+	for(i = 3; i <= num; i++){
+		resultado = ant + ant2;
+		ant = ant2;
+		ant2 = resultado;
+		printf("%d " , resultado);
+	}
+		if( resultado == num){ 
+			
+			printf("\nEste número pertence a sequencia de Fibonacci");
+		
+		}else {
+			
+			printf("\nEste número não pertence a sequencia de Fibonacci");
+		}
+	
+	
+	return 0;
+}
